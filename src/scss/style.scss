@@ -1,0 +1,59 @@
+
+//globs
+@use "./base/vars" as *;
+
+// base
+@use "./base/reset";
+@use "./base/base";
+@use "./base/mixins";
+@use "./base/containers";
+
+//components
+@use "./companents/menu";
+@use "./companents/home";
+@use "./companents/rick-morty";
+@use "./companents/rick-motry-footer";
+@use "./companents/counter";
+@use "./companents/imageGallery";
+
+@font-face {
+  font-family: "WubbaLubba";
+  src:  url("../assets/fonts/WubbaLubbaDubDubRegular.woff2") format("woff2"),
+  url("../assets/fonts/WubbaLubbaDubDubRegular.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+  --container-width: 1180px;
+  --container-padding: 15px;
+}
+
+.btn{
+  padding: 8px 14px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  background-color: $btn-primary-bg;
+  color: $btn-primary-text;
+  border-radius: 8px;
+  transition: 0.2s;
+  &:hover{
+    background-color: $btn-primary-hover;
+  }
+  &:active{
+    background-color: $btn-primary-bg;
+  }
+  &:disabled{
+    background-color: $btn-primary-disabled;
+    color: $btn-primary-text-disabled;
+  }
+}
+
+.greeting{
+  user-select: none;
+}
+
+
+

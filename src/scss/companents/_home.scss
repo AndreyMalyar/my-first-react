@@ -1,0 +1,46 @@
+
+
+
+//animate
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+.watch {
+  background-color: #fff1;
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  margin-bottom: 50px;
+
+  &__time {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  &__circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #747bff;
+  }
+}

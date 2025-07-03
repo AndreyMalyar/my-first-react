@@ -1,0 +1,30 @@
+@use '../base/vars' as *;
+
+.footer-RickMorty{
+  position: relative;
+  &__content{
+    min-height: 300px;
+    padding-bottom: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__decoration{
+    fill: $btn-primary-bg;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &__fon{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: $btn-primary-bg;
+    z-index: -2;
+  }
+}
