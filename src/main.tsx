@@ -6,7 +6,7 @@ import {Provider} from "react-redux";
 import {index} from "./store";
 
 createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/my-first-react">
       <Provider store={index}>
           <App />
       </Provider>
