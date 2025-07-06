@@ -54,9 +54,9 @@ export default CountPages;
 
 
 /*
-            useEffect(() => {
-            const currentCharacter  = characters.find(item => item.id === Number(params.id))
-            if(!currentCharacter || !location.state.type) {navigate("/rickAndMorty")}
-            setCharacter(currentCharacter)
-        }, [])
-            */
+useEffect(() => {
+    const currentCharacter  = characters.find(item => item.id === Number(params.id))
+    if(!currentCharacter || !location.state.type) {navigate("/rickAndMorty")}
+    setCharacter(currentCharacter)
+}, [])
+*/

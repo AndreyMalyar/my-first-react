@@ -7,6 +7,7 @@
 @use "./base/base";
 @use "./base/mixins";
 @use "./base/containers";
+@use "./base/section";
 
 //components
 @use "./companents/menu";
@@ -54,6 +55,8 @@
 .greeting{
   user-select: none;
 }
+
+
 
 
 

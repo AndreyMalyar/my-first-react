@@ -1,0 +1,41 @@
+@use 'vars' as * ;
+
+.section{
+  &__title{
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    color: $primary-bg-accent;
+  }
+  &__subtitle{
+    margin: 10px 0 5px 10px;
+    padding-left: 25px;
+    position: relative;
+    color: $primary-bg-accent;
+    text-transform: uppercase;
+  }
+  &__wrapCode{
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    margin: 5px 0 0 20px;
+    &-commit{
+      color: #888;
+    }
+  }
+  &__code{
+    display: flex;
+    gap: 20px;
+    &-img{
+      width: clamp(250px, 35vw, 450px);
+      height: auto;
+      flex-shrink: 0;
+    }
+    &-description{
+      flex: 1;
+      margin: 0;
+    }
+  }
+}
