@@ -2,6 +2,7 @@ import Menu from "../../menu/menu.tsx";
 import SectionDate from "./SectionDate.tsx";
 import Accordion from "../../Accardion.tsx";
 import SectionMethodsArr from "./SectionMethodsArr.tsx";
+import SectionRestApiFetch from "./SectionRestApiFetch.tsx";
 
 function OtherPage(){
 
@@ -20,11 +21,12 @@ function OtherPage(){
                     <Accordion title={"Методы массивов"}>
                         <SectionMethodsArr />
                     </Accordion>
-
+                    <Accordion title={"Интеграция с REST API — fetch, Axios"}>
+                        <SectionRestApiFetch />
+                    </Accordion>
                 </div>
             </main>
 
-            <h3>fetch и axios</h3>
             <h3>некоторые пояснения</h3>
         </>
     )
