@@ -18,7 +18,6 @@ function App() {
             <Route path="/counters" element={<CountersPages />} />
             <Route path="/counters/counter" element={<CountPages />} />
             <Route path="/other" element={<OtherPage />} />
-            <Route path="/blog" element={<h2>блог</h2>} />
         </Routes>
     </>
   )

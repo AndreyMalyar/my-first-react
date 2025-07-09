@@ -10,7 +10,6 @@ function Menu(){
                 <MenuItem label="rick and morty" to="/rickAndMorty" id="rickAndMorty-link" />
                 <MenuItem label="counters" to="/counters" id="counters-link" />
                 <MenuItem label="other" to="/other" id="other-link" />
-                <MenuItem label="blog" to="/blog" target="_blank" id="blog-link" />
             </div>
         </nav>
     )
