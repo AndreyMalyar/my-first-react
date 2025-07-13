@@ -3,20 +3,17 @@ import type { FC } from "react";
 interface FooterImageProps {
     className?: string;
     width?: string;
-    height?: string;
 }
 
 const FooterImage: FC<FooterImageProps> = ({
     className = "footer-image",
     width = "100%",
-    height = "auto",
     }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 4960 1152"
             width={width}
-            height={height}
             className={className}
         >
             <path

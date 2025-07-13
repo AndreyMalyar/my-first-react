@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { getSelectedCounter } from "./countersConfig.ts";
-import ImageGallery from "./ui/ImageCallery.tsx";
+import ImageGallery from "../../ui/ImageCallery.tsx";
 
 function CountPages() {
     const navigate = useNavigate();
@@ -20,8 +20,8 @@ function CountPages() {
     return (
         <div className={"container countInfo"}>
             <div className="countInfo-navigation">
-                <button className='countInfo-navigation__btn btn' onClick={() => navigate('/counters')}>← Назад к
-                    счетчикам
+                <button className='countInfo-navigation__btn btn' onClick={() => navigate('/counters')}>
+                    ← Назад к счетчикам
                 </button>
             </div>
 

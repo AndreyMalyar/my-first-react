@@ -8,6 +8,7 @@ function Menu(){
             <div className={"menu__item"}>
                 <MenuItem label="home" to="/" />
                 <MenuItem label="rick and morty" to="/rickAndMorty" id="rickAndMorty-link" />
+                <MenuItem label="star wars" to="/starWars" id="starWars-link" />
                 <MenuItem label="counters" to="/counters" id="counters-link" />
                 <MenuItem label="other" to="/other" id="other-link" />
             </div>

@@ -21,8 +21,6 @@ import counterOneEvents1 from '../../../assets/imgCode/oneEventsCount-1.png'
 //
 import reducerCounter1 from '../../../assets/imgCode/reducerCounter-1.png'
 import reducer1 from '../../../assets/imgCode/reducer_1.jpg'
-import reducer2 from '../../../assets/imgCode/reducer_2.jpg'
-import reducer3 from '../../../assets/imgCode/reducer_3.jpg'
 
 // тип для одного счетчика
 export interface CounterConfig {
@@ -69,8 +67,6 @@ export const countersArray: CounterConfig[] = [
         images: [
             reducerCounter1,
             reducer1,
-            reducer2,
-            reducer3,
         ]
     }, {
         id: 'styled',

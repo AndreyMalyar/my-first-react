@@ -51,6 +51,7 @@ export default function Pagination () {
                     min="1"
                     max={totalPages}
                     value={inputPage|| ''}
+                    style={{marginRight: "10px"}}
                     onChange={handleInputChange}
                     onKeyPress={handleKeyPress}
                     placeholder="№"

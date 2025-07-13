@@ -21,7 +21,7 @@ interface Character {
 
 interface ICharacterState {
     characters: Array<{name: string; image: string, id: number}>;
-    currentCharacter: Character | null; // типизированный персонаж нужно ли здесь использовать any
+    currentCharacter: Character | null;
     isLoading: boolean;
     isLoadingDetail: boolean; // отдельный лоадер для детального просмотра
     currentPage: number;
@@ -69,8 +69,9 @@ export const fetchCharacterById = createAsyncThunk(
         try {
             const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
             if(!response.ok) {
-                throw new Error('Failed to fetch characters.');
+                throw new Error('Failed to fetch character.');
             }
+            // Имитация задержки. Убрать в продакшене
             await new Promise(res => {
                 setTimeout(() => res(true), 2000)
             })
@@ -135,18 +136,3 @@ export const charactersSlice = createSlice({
 
 export const { setCurrentPage, clearCurrentCharacter, clearError, setInputPage } = charactersSlice.actions;
 export default charactersSlice.reducer;
-
-/*
-* Для успешных ответов:
-data - самое популярное поле для основного содержимого ответа
-results - часто используется для списков или результатов поиска
-items - альтернатива для массивов данных
-payload - иногда встречается как синоним data
-
-* Для структурированных ответов:
-message - текстовое сообщение для пользователя
-status - статус операции (success, error, etc.)
-code - числовой код ответа
-timestamp - время ответа
-meta - метаданные (пагинация, общее количество и т.д.)
-*/
