@@ -19,8 +19,8 @@ function starWarsInfo() {
         <main className="starWarsInfo">
             <div className="container">
                 <div className="starWarsInfo__navigation">
-                    <button className='btn' onClick={() => navigate('/starWars')}>
-                        ← Перейти на страницу Star Wars
+                    <button className='btn' onClick={() => navigate('/useReducer')}>
+                        ← Перейти на страницу useReducer
                     </button>
                 </div>
                 <h4>Создание reducer</h4>

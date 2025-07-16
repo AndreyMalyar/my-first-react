@@ -9,6 +9,8 @@ import OtherPage from "./components/pages/other/OtherPage.tsx";
 import CodeRickMortyPage from "./components/pages/rick-morty/CodeRickMortyPage.tsx";
 import StarWarsPage from "./components/pages/Star-Wars/StarWarsPage.tsx";
 import StarWarsInfo from "./components/pages/Star-Wars/StarWarsInfo.tsx";
+import HooksPage from "./components/pages/hooksPage/hooksPage.tsx";
+import HooksPageInfo from "./components/pages/hooksPage/HooksPageInfo.tsx"
 
 function App() {
 
@@ -16,11 +18,13 @@ function App() {
     <>
         <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/rickAndMorty" element={<RickMortyPage />} />
-            <Route path="/rickAndMorty/character/:id" element={<CharacterDefaultPage />} />
-            <Route path="/rickAndMorty/viewCode" element={<CodeRickMortyPage />} />
-            <Route path="/starWars" element={<StarWarsPage />} />
-            <Route path="/starWars/viewCode" element={<StarWarsInfo />} />
+            <Route path="/redux" element={<RickMortyPage />} />
+            <Route path="/redux/character/:id" element={<CharacterDefaultPage />} />
+            <Route path="/redux/viewCode" element={<CodeRickMortyPage />} />
+            <Route path="/useReducer" element={<StarWarsPage />} />
+            <Route path="/useReducer/viewCode" element={<StarWarsInfo />} />
+            <Route path="/customHooks" element={<HooksPage />} />
+            <Route path="/customHooks/viewCode" element={<HooksPageInfo />} />
             <Route path="/counters" element={<CountersPages />} />
             <Route path="/counters/counter" element={<CountPages />} />
             <Route path="/other" element={<OtherPage />} />

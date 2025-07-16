@@ -64,8 +64,8 @@ function CodeRickMortyPage(){
         <main className="codeReduxInfo">
             <div className="container">
                 <div className="codeReduxInfo__navigation">
-                    <button className='btn' onClick={() => navigate('/rickAndMorty')}>
-                        ← Перейти на страницу Rick and Morty
+                    <button className='btn' onClick={() => navigate('/redux')}>
+                        ← Перейти на страницу Redux
                     </button>
                 </div>
                 {showNotes(arrInfoRedux, "Настройка Redux")}

@@ -36,7 +36,7 @@ function CharacterDefaultPage () {
             navigate(-1);
         } else {
             // Если нет истории (прямой переход) - на rick and morty
-            navigate("/rickAndMorty");
+            navigate("/redux");
         }
     };
 
@@ -49,7 +49,7 @@ function CharacterDefaultPage () {
                     <h2 className={'character-default__title'}>Rick and Morty</h2>
                     <h2 style={{color: "red"}}>Ошибка загрузки</h2>
                     <p>{error}</p>
-                    <button className="btn" onClick={() => navigate("/rickAndMorty")}>
+                    <button className="btn" onClick={() => navigate("/redux")}>
                         Перейти к списку персонажей
                     </button>
                 </div>

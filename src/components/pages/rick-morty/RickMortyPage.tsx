@@ -9,7 +9,7 @@ function RickMortyPage(){
 
 
     const handleDetailsClick = () => {
-        navigate('/rickAndMorty/viewCode'); // переходим на страницу посмотреть код
+        navigate('/redux/viewCode'); // переходим на страницу посмотреть код
     }
 
     return (

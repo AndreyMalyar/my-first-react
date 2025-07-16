@@ -1,10 +1,24 @@
 import Menu from "../../menu/menu.tsx";
 import SectionDate from "./SectionDate.tsx";
-import Accordion from "../../Accardion.tsx";
 import SectionMethodsArr from "./SectionMethodsArr.tsx";
 import SectionRestApiFetch from "./SectionRestApiFetch.tsx";
+import {type CSSProperties, useState} from "react";
+
+type ComponentName = "none" | 'date' | 'methodsArr' | 'restApiFetch' | 'notes';
+const styleRound = {
+    fontSize: '1.3rem',
+    lineHeight: '1.3rem',
+} as CSSProperties
 
 function OtherPage(){
+    const [activeTab, setActiveTab] = useState<ComponentName>('none');
+    const toggleComponent = (componentName: ComponentName) => {
+        if (activeTab === componentName){
+            setActiveTab('none');
+        } else {
+            setActiveTab(componentName)
+        }
+    }
 
     return (
         <>
@@ -13,21 +27,42 @@ function OtherPage(){
                     <Menu />
                 </div>
             </header>
-            <main className="container">
+            <main>
                 <div className="container">
-                    <Accordion title={"Date. Форматирование дат и чисел"}>
-                        <SectionDate />
-                    </Accordion>
-                    <Accordion title={"Методы массивов"}>
-                        <SectionMethodsArr />
-                    </Accordion>
-                    <Accordion title={"Интеграция с REST API — fetch, Axios"}>
-                        <SectionRestApiFetch />
-                    </Accordion>
+                    <div className="expanded">
+                        <div className={`expanded__item ${activeTab === "date" ? "expanded__item_active" : undefined}`} onClick={() => toggleComponent('date')}>
+                            {activeTab === 'date' ? "скрыть" : "показать"} Date. Форматирование дат и чисел
+                            <span style={styleRound}
+                                  className={activeTab === "date" ? "expanded__item_active" : undefined}>●</span>
+                        </div>
+                        <div className={`expanded__item ${activeTab === "methodsArr" ? "expanded__item_active" : undefined}`} onClick={() => toggleComponent('methodsArr')}>
+                            {activeTab === 'methodsArr' ? "скрыть" : "показать"} Методы массивов
+                            <span style={styleRound}
+                                  className={activeTab === "methodsArr" ? "expanded__item_active" : undefined}>●</span>
+                        </div>
+                        <div
+                            className={`expanded__item ${activeTab === "restApiFetch" ? "expanded__item_active" : undefined}`}
+                                onClick={() => toggleComponent('restApiFetch')}>
+                            {activeTab === 'restApiFetch' ? "скрыть" : "показать"} Интеграция с REST API — fetch, Axios
+                            <span style={styleRound}
+                                  className={activeTab === "restApiFetch" ? "expanded__item_active" : undefined}>●</span>
+                        </div>
+                        <div
+                            className={`expanded__item ${activeTab === "notes" ? "expanded__item_active" : undefined}`}
+                                onClick={() => toggleComponent('notes')}>
+                            {activeTab === 'notes' ? "скрыть" : "показать"} Заметки
+                            <span style={styleRound}
+                                  className={activeTab === "notes" ? "expanded__item_active" : undefined}>●</span>
+                        </div>
+                    </div>
+                    {activeTab === "date" && <SectionDate/>}
+                    {activeTab === "methodsArr" && <SectionMethodsArr/>}
+                    {activeTab === "restApiFetch" && <SectionRestApiFetch/>}
+                    {activeTab === "notes" && <h3>Здесь будут заметки</h3>}
                 </div>
             </main>
 
-            <h3>некоторые пояснения</h3>
+
         </>
     )
 }

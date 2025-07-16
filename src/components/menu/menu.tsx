@@ -7,8 +7,9 @@ function Menu(){
            <Greeting />
             <div className={"menu__item"}>
                 <MenuItem label="home" to="/" />
-                <MenuItem label="rick and morty" to="/rickAndMorty" id="rickAndMorty-link" />
-                <MenuItem label="star wars" to="/starWars" id="starWars-link" />
+                <MenuItem label="redux" to="/redux" id="redux-link" />
+                <MenuItem label="useReducer" to="/useReducer" id="useReducer-link" />
+                <MenuItem label="customHooks" to="/customHooks" id="customHooks-link" />
                 <MenuItem label="counters" to="/counters" id="counters-link" />
                 <MenuItem label="other" to="/other" id="other-link" />
             </div>

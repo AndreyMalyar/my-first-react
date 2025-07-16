@@ -1,0 +1,48 @@
+
+
+.customHooks__title{
+  text-transform: uppercase;
+  color: #213547;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.cardUser{
+  width: 500px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(134, 168, 191);
+  border-radius: 20px;
+  padding: 10px 20px;
+  &__img{
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  &__name{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 20px;
+    margin-top: 10px;
+    color: #315F85;
+  }
+  &__gender{
+    font-size: 15px;
+  }
+  &__phone{
+    font-size: 15px;
+    width: 45%;
+  }
+  &__location{
+    font-size: 15px;
+    width: 45%;
+    text-align: right;
+  }
+}

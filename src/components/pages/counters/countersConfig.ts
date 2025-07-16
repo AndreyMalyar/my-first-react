@@ -4,6 +4,7 @@ import StyledCounter from "./StyledCounter.tsx";
 import DoubleClickCounter from "./doubleClickCount.tsx";
 import CounterOneEvents from "./OneEventsCount.tsx";
 import CounterReducer from "./CounterReducer";
+import hooksCounter from "./hooksCounter.tsx";
 
 // Импорты картинок из assets/imgCode
 // store counter
@@ -21,6 +22,9 @@ import counterOneEvents1 from '../../../assets/imgCode/oneEventsCount-1.png'
 //
 import reducerCounter1 from '../../../assets/imgCode/reducerCounter-1.png'
 import reducer1 from '../../../assets/imgCode/reducer_1.jpg'
+//
+import customHooksImage1 from '../../../assets/imgCode/customHooksImage-1.png'
+import customHooksImage2 from '../../../assets/imgCode/customHooksImage-2.png'
 
 // тип для одного счетчика
 export interface CounterConfig {
@@ -111,6 +115,24 @@ export const countersArray: CounterConfig[] = [
         ],
         images: [
             counterOneEvents1
+        ]
+    }, {
+        id: 'hookCount',
+        name: 'Счетчик с кастомным хуком',
+        component: hooksCounter,
+        description: "Этот компонент демонстрирует создание и использование кастомного хука useCounter для управления состоянием счетчика. Показывает принципы переиспользования логики и разделения ответственности в React.",
+        features: [
+            "Кастомный хук useCounter для управления состоянием",
+            "Логика инкремента и декремента в отдельном хуке",
+            "Защита от отрицательных значений счетчика",
+            "Функциональное обновление состояния с prevState",
+            "Переиспользуемая логика счетчика",
+            "Разделение UI и бизнес-логики",
+            "TypeScript поддержка кастомных хуков"
+        ],
+        images: [
+            customHooksImage1,
+            customHooksImage2,
         ]
     }
 ];

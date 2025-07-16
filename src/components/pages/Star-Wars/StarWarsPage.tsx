@@ -105,7 +105,7 @@ function StarWarsPage(): JSX.Element | null {
     */
 
     const handleDetailsClick = () => {
-        navigate('/starWars/viewCode'); // переходим на страницу посмотреть код
+        navigate('/useReducer/viewCode'); // переходим на страницу посмотреть код
     }
 
     //Функцию обновления
@@ -137,7 +137,7 @@ function StarWarsPage(): JSX.Element | null {
             </button>
 
             <section className={"star-wars"}>
-                <h3 className={"star-wars__title"}>Простой компонент загрузки</h3>
+                <h3 className={"star-wars__title"}>Простой компонент загрузки (используется use Reducer)</h3>
 
                 {/* Условный рендеринг только для контента */}
                 {status === "INITIALIZE" && <h2>Initializing..</h2>}
