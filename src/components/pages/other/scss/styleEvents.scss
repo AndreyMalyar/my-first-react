@@ -1,0 +1,90 @@
+
+// Базовые стили для кнопок
+%btn-base{
+  padding: 7px 14px;
+  background-color: rgb(122, 151, 175);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.events{
+  &__btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  &__btn{
+    @extend %btn-base;
+    &_active{
+      @extend %btn-base;
+      background-color: #315F85;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+  &__description{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 130%;
+    &_icon{
+      font-size: 1.3rem;
+      margin-right: 6px;
+    }
+  }
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  & th:first-child{
+    width: 150px;
+    text-align: center;
+  }
+  & th, td {
+    background-color: #315F85;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: left;
+  }
+  & td{
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+  }
+  & td span {
+    padding: 6px 8px;
+    background-color: #B9D2E6;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    margin: 5px 5px;
+    display: inline-block;
+    transition: 0.2s linear;
+    &:active{
+      background-color: #315F85;
+      color: #fff;
+    }
+  }
+}
+
+.eventHandling{
+  padding: 40px 0;
+  &__box{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  &__table{
+  }
+  &__img{
+    width: 48%;
+  }
+}
